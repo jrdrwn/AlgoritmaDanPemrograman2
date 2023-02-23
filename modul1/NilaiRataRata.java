@@ -1,3 +1,5 @@
+package modul1;
+
 import java.util.Scanner;
 
 public class NilaiRataRata {

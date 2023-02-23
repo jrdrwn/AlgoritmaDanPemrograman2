@@ -1,3 +1,5 @@
+package modul1;
+
 public class PengulanganSederhana {
     public static int n = 15;
 
