@@ -17,6 +17,7 @@ public class Fibonacci {
     }
 
     private static int solve(int n) {
+        // Conditional (ternary)
         return (n == 1 || n == 2) ? 1 : solve(n - 1) + solve(n - 2);
     }
 
