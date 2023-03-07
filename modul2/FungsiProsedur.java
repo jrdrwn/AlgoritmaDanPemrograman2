@@ -1,15 +1,13 @@
 package modul2;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class FungsiProsedur {
     static ArrayList<String> listBuah = new ArrayList<String>();
     static boolean isRunning = true;
-    static InputStreamReader inputStreamReader = new InputStreamReader(System.in);
-    static BufferedReader input = new BufferedReader(inputStreamReader);
+    static Scanner input = new Scanner(System.in);
 
     static void showMenu() throws IOException {
         System.out.println("========= MENU ========");
@@ -19,7 +17,7 @@ public class FungsiProsedur {
         System.out.println("[4] Delete Buah");
         System.out.println("[5] Exit");
         System.out.print("PILIH MENU> ");
-        int selectedMenu = Integer.valueOf(input.readLine());
+        int selectedMenu = input.nextInt();
         switch (selectedMenu) {
             case 1:
                 showAllBuah();
@@ -55,16 +53,16 @@ public class FungsiProsedur {
 
     static void insertBuah() throws IOException {
         System.out.print("Nama buah: ");
-        String namaBuah = input.readLine();
+        String namaBuah = input.next();
         listBuah.add(namaBuah);
     }
 
     static void editBuah() throws IOException {
         showAllBuah();
         System.out.print("Pilih nomer buah: ");
-        int indexBuah = Integer.valueOf(input.readLine());
+        int indexBuah = input.nextInt();
         System.out.print("Nama Baru: ");
-        String namaBaru = input.readLine();
+        String namaBaru = input.next();
         // ubah nama buah
         listBuah.set(indexBuah, namaBaru);
     }
@@ -72,7 +70,7 @@ public class FungsiProsedur {
     static void deleteBuah() throws IOException {
         showAllBuah();
         System.out.print("Pilih nomer buah: ");
-        int indexBuah = Integer.valueOf(input.readLine());
+        int indexBuah = input.nextInt();
         // hapus buah
         listBuah.remove(indexBuah);
     }
