@@ -48,7 +48,7 @@ public class DataSearch {
         }
     }
 
-    static void mengurutkanMobil() {
+    static void mengurutkanProduk() {
         System.out.println("Produk Termurah Hingga Termahal");
 
         int n = harga.length;
@@ -71,7 +71,7 @@ public class DataSearch {
         }
     }
 
-    static void menunjukMobil(Integer i) {
+    static void menunjukProduk(Integer i) {
         System.out.println("Harga Produk Termurah Nomor Ke-" + i);
 
         System.out.println("Produk Mobil " + produk[i - 1] + " Seharga " + numberToRupiah(harga[i - 1]));
@@ -79,8 +79,8 @@ public class DataSearch {
 
     public static void main(String[] args) {
         cariProduk("Audi");
-        mengurutkanMobil();
-        menunjukMobil(2);
+        mengurutkanProduk();
+        menunjukProduk(2);
     }
 
 }
