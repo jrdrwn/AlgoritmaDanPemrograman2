@@ -1,3 +1,4 @@
 Jordi Irawan_223010503002*
 *.docx
 **/*.pdf
+!Responsi.pdf
